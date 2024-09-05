@@ -1,0 +1,55 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+    
+    <h2>Create a new listing</h2>
+    <br>
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div>
+            <label for="title" class="form-label" > Title</label>
+            <input name="listing[title]" placeholder="enter title" type="text" class="form-control" required>
+            <div class="valid-feedback">Title looks good</div>
+        </div>
+       
+        <br>
+        <div>
+            <label for="description" class="form-label"> Description</label>
+            <textarea name="listing[description]" placeholder="enter description" class="form-control" rows="6" required></textarea>
+            <div class="invalid-feedback">Enter a short description</div>
+        </div>
+        
+        <br>
+        <div>
+            <label for="image" class="form-label">Upload Image</label>
+            <input name="listing[image]"  type="file" class="form-control" >
+            required
+        </div>
+        
+        <br>
+        
+        <div class="row">
+            <div class="col-6">
+                <label for="price" class="form-label"> Price</label>
+                <input name="listing[price]" placeholder="enter price" class="form-control" required>
+                <div class="invalid-feedback">Please enter valid price</div>
+            </div>
+
+            <div class="col-6">
+                <label for="country" class="form-label"> Country</label>
+                <input name="listing[country]" placeholder="enter country" type="text" class="form-control" required>
+                <div class="invalid-feedback">Please enter valid country name</div>
+            </div>
+            
+        </div>
+        <br>
+        <div>
+            <label for="location" class="form-label"> Location</label>
+            <input type="text" name="listing[location]" placeholder="enter location" class="form-control" required>
+            <div class="invalid-feedback">Please enter valid location</div>
+        </div>
+        
+        <br>
+        <button class="btn btn-dark add-btn">Add</button>
+        <br>
+        <br>
+    </form>
+</body>
